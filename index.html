@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, 
+     initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+body{text-align:center;background-color:#d1dede}#buy_button{display:none}.btn-group{margin-top:0rem;margin-bottom:.5rem}#company_logo{font-size:15rem;color:#f64740}.col{width:40%;position:relative;left:30%}.col_product_page{width:80%;height:90%;position:relative;left:10%}.fa{margin-left:1rem;margin-right:1rem}.fa:hover{color:#000}.home-box{width:100%}.home-box-image{width:50%;margin-top:1rem;margin-bottom:1rem}.home-box-text{position:relative;bottom:15rem;left:30rem;text-align:left;width:35%}#home_description{text-align:center;position:relative;left:15%}.icon_anchor{color:gray}#products_div{display:none}#product_div_add_cart_button{display:none}#product_page{display:none}#product_page_add_cart_button{display:none}
+
+</style>
+  </head>
+  <body style="">
+
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <button type="button" onclick="home_page()" class="btn btn-outline-secondary">Home</button>
+      <button type="button" onclick="camisetas_page()" class="products_btn btn btn-outline-secondary">Camisas</button>
+      <button type="button" onclick="shorts_page()" class="products_btn btn btn-outline-secondary">Shorts</button>
+      <button type="button" onclick="sapatos_page()" class="products_btn btn btn-outline-secondary">Sapatos</button>
+      <button id="carrinho_anchor_title" type="button" onclick="carrinho_page()" class="btn btn-outline-secondary">🛒 Carrinho (0)</button>
+    </div>
+
+    <div id="home-div">
+      <h1 id="home_title">Nome da empresa</h1>
+
+        <div class="home-box">
+          <div class="home-box-image">
+            <i id="company_logo" class="fa fa-product-hunt"></i>
+            </div>
+          <div class="home-box-text">
+            <p id="home_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+
+
+
+    </div> <!-- end home-div -->
+
+
+    <div id="products_div">
+      <h1 id="product_div_title"></h1>
+      <p id="product_div_description"></p>
+
+      <div class="col">
+        <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 id="product_div_first_product_title"class="my-0 fw-normal"></h4>
+        </div>
+        <div class="card-body">
+          <img id="product_div_first_product_image" src="">
+          <h1 id="product_div_first_product_price" class="card-title pricing-card-title"></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li id="product_div_first_product_description"></li>
+            <li id="product_div_first_product_second_description"></li>
+            <li id="product_div_first_product_third_description"></li>
+          </ul>
+          <button onclick="add_product_to_cart()" id="product_div_add_cart_button" type="button" class="btn btn-outline-secondary"></button>
+        </div>
+      </div>
+      </div>
+
+    </div>
+    <!-- end product-div -->
+
+    <div id="product_page">
+      <div class="col_product_page">
+        <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h1 class="my-0 fw-normal"></h1>
+          <img src="" id="product_page_image">
+          <h3 id="product_page_title" class="card-title pricing-card-title"></h3>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li  id="product_page_description"></li>
+          </ul>
+          <button onclick="add_product_to_cart()" id="product_page_add_cart_button" type="button" class="btn btn-outline-secondary"></button>
+        </div>
+      </div>
+      </div>
+
+    </div><!-- end product-page -->
+
+    <div id="cart_page">
+            <a target="_blank" id="buy_button" href=""  class="btn btn-outline-dark" href="#" role="button"></a>
+    </div>
+
+
+<!-- IDEA:
+<hr>
+  <footer class="container py-5">
+    <a class="icon_anchor" href="https://www.facebook.com">  <i class="fa fa-facebook-official fa-4x"></i></a>
+    <a class="icon_anchor" href="https://www.instagram.com">  <i class="fa fa fa-instagram fa-4x"></i></a>
+  </footer>
+ -->
+ 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+  
+<script>
+var valor_camisa_amarela=10,valor_camisa_branca=15,valor_camisa_preta=20,valor_short_preto=25,valor_short_azul=30,valor_sapato_branco=5,valor_sapato_preto=7,valor_sapato_verde=9,quantidade_de_camisas=0,quantidade_de_shorts=0,quantidade_de_sapatos=0,numero_de_produtos_no_carrinho=0,valor_total=0,page_title=["Camisas","Shorts","Sapatos"],page_description=["As melhores camisas para o seu dia a dia.","Os melhores shorts para o seu dia a dia.","Os melhores sapatos para o seu dia a dia."],productTitle=["Camisa Branca","Short preto","Sapato verde"],locationProductImage=["images/camisa_branca.jpg","images/short_preto.jpg","images/sapato_verde.jpg"],productPrice=[15,25,9],productDescription=["100% Algodão","100% Algodãoe leve","Leve e confortável"],produtos_conteudo=[[["Camisa Branca","Camisa Preta","Camisa amarela"],["images/camisa_branca.jpg","images/camisa_preta.jpg","images/camisa_amarela.jpg"],[15,20,20],["100% Algodão","100% Algodão","100% Algodão"]],[["Short Preto","Short Azul","Short Verde"],["images/short_preto.jpg","images/short_azul.jpg","images/short_verde.jpg"],[25,30,35],["100% Algodão","100% Algodão","100% Algodão"]],[["Sapato Verde","Sapato Preto","Sapato Branco","Sapato Amarelo"],["images/sapato_verde.jpg","images/sapato_preto.jpg","images/sapato_branco.jpg","images/sapato_amarelo.jpg"],[9,7,5,3],["Leve e confortável","Leve e confortável","Leve e confortável","Leve e confortável"]]];function home_page(){make_product_list_page_disappear(),make_carrinho_page_disappear(),$("#company_logo").css("display","block"),$("#home_title").html("Nome da empresa"),$("#home_description").html("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")}function camisetas_page(){products_pages(0)}function shorts_page(){products_pages(1)}function sapatos_page(){products_pages(2)}function products_pages(a){make_home_disappear(),make_carrinho_page_disappear(),make_product_list_page_disappear(),display_product_pages(a,page_title[a],page_description[a],produtos_conteudo[a][0][0],produtos_conteudo[a][1][0],produtos_conteudo[a][2][0],produtos_conteudo[a][3][0]),display_adicionar_carrinho_button()}function carrinho_page(){make_home_disappear(),make_product_list_page_disappear(),$("#products_div").css("display","block"),$("#product_div_title").html("Carrinho 🛒"),$("#product_div_first_product_price").html("R$ "+valor_total),$("#product_div_first_product_description").html(quantidade_de_camisas+" Camisa(s) branca: "+quantidade_de_camisas*valor_camisa_branca+" reais."),$("#product_div_first_product_second_description").html(quantidade_de_shorts+" Short(s) preto: "+quantidade_de_shorts*valor_short_preto+" reais."),$("#product_div_first_product_third_description").html(quantidade_de_sapatos+" Sapato(s) verde: "+quantidade_de_sapatos*valor_sapato_verde+" reais."),$("#buy_button").css("display","block"),$("#buy_button").html("Finalizar Compra"),$("#buy_button").css("width","40%"),$("#buy_button").css("position","relative"),$("#buy_button").css("left","30%"),$("#buy_button").attr("href","https://api.whatsapp.com/send?phone=5571996344481&text=Pedido%20%3A%20%0D"+quantidade_de_camisas+"%20Camisa(s)%20branca%3A%20"+quantidade_de_camisas*valor_camisa_branca+"%20reais.%0D"+quantidade_de_shorts+"%20Short(s)%20preto%3A%20"+quantidade_de_shorts*valor_short_preto+"%20reais.%0D"+quantidade_de_sapatos+"%20Sapato(s)%20verde%3A%20"+quantidade_de_sapatos*valor_sapato_verde+"%20reais.%0D%0D%0DTotal%20%3A%20R%24%20"+valor_total)}function add_product_to_cart(){"Camisas"===$("#product_div_title").html()&&(quantidade_de_camisas++,numero_de_produtos_no_carrinho++,valor_total+=15),"Shorts"===$("#product_div_title").html()&&(quantidade_de_shorts++,numero_de_produtos_no_carrinho++,valor_total+=25),"Sapatos"===$("#product_div_title").html()&&(quantidade_de_sapatos++,numero_de_produtos_no_carrinho++,valor_total+=9),$("#carrinho_anchor_title").html("🛒 Carrinho ("+numero_de_produtos_no_carrinho+")")}function display_product_pages(a,t,o,e,r,s,_){$("#products_div").css("display","block");produtos_conteudo[a][0].length;$("#product_div_first_product_title").html(produtos_conteudo[a][0][0]),$("#product_div_first_product_image").attr("src",produtos_conteudo[a][1][0]),$("#product_div_first_product_price").html("R$ "+produtos_conteudo[a][2][0]),$("#product_div_first_product_description").html(produtos_conteudo[a][3][0]),$("#product_div_title").html(t),$("#product_div_description").html(o)}function display_adicionar_carrinho_button(){$("#product_div_add_cart_button").css("display","block"),$("#product_div_add_cart_button").html("Adicionar ao carrinho 🛒"),$("#product_div_add_cart_button").css("width","50%"),$("#product_div_add_cart_button").css("position","relative"),$("#product_div_add_cart_button").css("left","25%")}function make_home_disappear(){$("#home_title").html(""),$("#home_description").html(""),$("#company_logo").css("display","none")}function make_product_list_page_disappear(){$("#products_div").css("display","none"),$("#product_div_add_cart_button").css("display","none"),$("#product_div_first_product_image").attr("src","")}function make_carrinho_page_disappear(){$("#products_div").css("display","none"),$("#buy_button").css("display","none"),$("#product_div_title").html(""),$("#product_div_first_product_description").html(""),$("#product_div_first_product_second_description").html(""),$("#product_div_first_product_third_description").html("")}
+</script>
+
+  </body>
+</html>
